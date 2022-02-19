@@ -74,8 +74,10 @@ public class HashTableMethod {
     }
 
     private static int findValue(Hashtable<Integer, Integer> table, int searchVal) {
-        if (table.containsValue(searchVal)) {
-            return searchVal;
+        for (int i = 0; i < table.size(); i++) {
+            if (table.get(i) == searchVal) {
+                return i;
+            }
         }
         return -1;
     }

@@ -59,9 +59,8 @@ public class LinkedListMethod {
 
     private static int findValue(LinkedList<Integer> list, int searchVal) {
         for (int i = 0; i < list.size(); i++) {
-            int val = list.get(i);
-            if (val == searchVal) {
-                return val;
+            if (list.get(i) == searchVal) {
+                return i;
             }
         }
         return -1;
